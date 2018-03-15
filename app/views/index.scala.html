@@ -1,4 +1,4 @@
-@*
+ @*
  * This template takes a single argument, a String containing a
  * message to display.
  *@
@@ -10,11 +10,18 @@
  * argument is an `Html` object containing the body of the page.
  *@
 @main("Welcome to Play") {
+ <h1> Cadastro de aniversariantes</h1>
 
-    @*
-     * Get an `Html` object by calling the built-in Play welcome
-     * template and passing a `String` message.
-     *@
-    @welcome(message, style = "java")
+ <form action="/aniversariante/novo" method="post">
+     <label for="nome">Nome:</label>
+     <input type="text" name="nome" id="nome">
+     <label for="aniversario">Nascimento:</label>
+     <input type="date" name="aniversario" id="aniversario">
+     <input type="submit" value="Cadastrar">
+
+
+
+ </form>
+
 
 }
